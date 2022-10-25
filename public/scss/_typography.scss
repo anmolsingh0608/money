@@ -1,0 +1,41 @@
+h1 {
+    color: $navy;
+    font: 700 25px/1.2 $lato;
+    margin-bottom: 15px;
+    @include min-screens(768px) {
+        font-size: 48px;
+        margin-bottom: 30px;
+    }
+}
+
+h2 {
+    color: $navy;
+    font: 700 24px/1.2 $lato;
+    @include min-screens(768px) {
+        font-size: 34px;
+    }
+}
+
+p {
+    color: $gray;
+    font: 18px $lato;
+    margin-bottom: 15px;
+    @include min-screens(768px) {
+        font-size: 20px;
+        margin-bottom: 25px;
+    }
+    strong {
+        font-weight: 700;
+    }
+    a {
+        color: $green;
+        text-decoration: underline;
+    }
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.cta {
+    @include cta;
+}

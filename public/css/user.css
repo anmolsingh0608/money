@@ -1,0 +1,18 @@
+div.checkbox-group.required {
+    position: relative;
+}
+.checkbox-group.required .tool-tip {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 4px;
+    border: 1px solid red;
+    font-size: 12px;
+    background-color: white;
+    border-radius: 5px;
+}
+.checkbox-group.required.show-err .tool-tip {
+    display: inline;
+    margin-right: 400px;
+}

@@ -1,0 +1,16 @@
+@import 'mixins';
+@import 'header';
+@import 'user-dashboard';
+@import 'donut';
+@import 'form';
+@import 'certificate';
+@import 'typography';
+body {
+    &.halt {
+        overflow: hidden;
+    }
+}
+
+.container-xxl {
+    max-width: 1440px;
+}

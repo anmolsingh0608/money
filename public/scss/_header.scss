@@ -1,0 +1,19 @@
+.header {
+    padding: 15px;
+    position: relative;
+    z-index: 10;
+    @include min-screens(768px) {
+        padding: 20px 50px;
+    }
+    .brand {
+        width: 175px;
+        @include min-screens(768px) {
+            width: 225px;
+        }
+    }
+    .logout {
+        color: $gray;
+        font: 700 20px/1 "Lato", sans-serif;
+        text-decoration: none;
+    }
+}

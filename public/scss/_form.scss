@@ -1,0 +1,80 @@
+.img-full {
+    left: 0;
+    min-height: 100vh;
+    position: sticky;
+    top: 0;
+    img {
+        @include fit {
+            height: 100vh;
+        }
+    }
+}
+
+.form-wrap {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 350px;
+    @include max-screens(1600px) {
+        padding: 50px 0;
+    }
+    .brand {
+        margin-bottom: 30px;
+        text-align: center;
+        img {
+            @include max-screens(767px) {
+                width: 250px;
+            }
+        }
+    }
+    form {
+        .input-wrap {
+            position: relative;
+            .form-label {
+                background: $white;
+                color: $gray;
+                font: 700 16px/1 $lato;
+                left: 5px;
+                margin: 0;
+                padding: 0 5px;
+                position: absolute;
+                top: -10px;
+                z-index: 5;
+            }
+            .form-control {
+                border-radius: 0;
+                border: 1px solid $gray;
+                font: 20px/1 $lato;
+                height: 50px;
+                margin-top: 10px;
+                &::placeholder {
+                    color: #C1C1C1;
+                    opacity: 1;
+                }
+                &:focus {
+                    box-shadow: 0 0 0 .25rem rgba(#66BB2E, 0.25);
+                }
+            }
+            .form-check-input {
+                &:checked {
+                    background-color: #66BB2E;
+                    border-color: #66BB2E;
+                }
+            }
+            .form-select {
+                @extend .form-control;
+            }
+        }
+        p,
+        .form-check-label {
+            color: $gray;
+            font: 700 18px/1 $lato;
+            a {
+                color: $green;
+                text-decoration: underline;
+            }
+        }
+        &.row>* {
+            margin-top: 25px;
+        }
+    }
+}

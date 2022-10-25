@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+$white:#fff;
+$black:#000;
+$navy:#177483;
+$gray:#686868;
+$green: #66BB2E;
+$lightgrey:#f4f4f4;
+$blue:#25d3ef;
+$purple:#39163d;
+$pink: #9c27b0;
+$lato:'Lato',
+sans-serif;
+@mixin max-screens($size:767px) {
+    @media (max-width: $size) {
+        @content;
+    }
+}
+
+@mixin min-screens($size:1230px) {
+    @media (min-width: $size) {
+        @content;
+    }
+}
+
+@mixin fit {
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    @content;
+}
+
+@mixin cta {
+    background: $green;
+    border: 1px solid $green;
+    color: #F7F7F7;
+    font: 700 20px/1 "Lato", sans-serif;
+    max-width: 350px;
+    padding: 15px 50px 15px 15px;
+    position: relative;
+    text-decoration: none;
+    width: 100%;
+    .icon {
+        background: #82D04E;
+        border-left: 1px solid $green;
+        width: 50px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+    }
+    &:hover,
+    &:focus {
+        color: #F7F7F7;
+    }
+    &.transparent {
+        background: none;
+        color: $green;
+        max-width: none;
+        .icon {
+            background: none;
+        }
+    }
+    &.disabled {
+        opacity: 0.5;
+        pointer-events: none;
+    }
+}
